@@ -19,10 +19,10 @@ sudo apt-get install sbt
 
 # start spark master & worker
 > spark-master.sh
-> start-worker.sh spark://192.46.209.57:7077/
+> start-worker.sh spark://<ip-address>:7077/
 
 # go back to the terminal pointing to the directory with scala and sbt file and create the sbt package
 > sbt package
 
 
-> spark-submit --class ExceptionHandlingTest.class --master spark://192.46.209.57:7077/ \target/scala-2.12/exceptionhandlingtest_2.12-1.0.jar
+> spark-submit --class ExceptionHandlingTest.class --master spark://<ip-address>:7077/ \target/scala-2.12/exceptionhandlingtest_2.12-1.0.jar

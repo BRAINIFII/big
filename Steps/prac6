@@ -1,16 +1,21 @@
 # Hive installation
-1. Download hive-2.3.9 from the given link
-https://downloads.apache.org/hive/
+1. Download hive-2.3.9
+> sudo su hadoop
+> wget https://downloads.apache.org/hive/hive-2.3.9/apache-hive-2.3.9-bin.tar.gz
+> tar -xvzf apache-hive-2.3.9-bin.tar.gz
+> mv apache-hive-2.3.9-bin /home/hadoop/hive
 
 2. Extract, rename and move the downloaded zip file to the appropriate folder
 3. Edit the .bashrc file
-$ nano ~/.bashrc
+> nano ~/.bashrc
 export HIVE_HOME=/home/hadoop/hive
 export PATH=$PATH:$HIVE_HOME/bin
 
+> source ~/.bashrc
+
 4. Edit the core-site.xml and add the following properties within the existing Hadoop configuration
 
-> nano $HADOOP_HOME/etc/Hadoop/core-site.xml
+> nano $HADOOP_HOME/etc/hadoop/core-site.xml
 <property>
         <name>hadoop.proxyuser.hadoop.groups</name>
         <value>*</value>
@@ -27,5 +32,16 @@ export PATH=$PATH:$HIVE_HOME/bin
         <name>hadoop.proxyuser.server.groups</name>
         <value>*</value>
 </property>
+
+> stop-dfs.sh
+> stop-yarn.sh
+
 5. Make the hdfs directory
-$ hadoop fs -mkdir /tmp
+> hadoop fs -mkdir /tmp
+> hadoop fs -mkdir /tmp/user
+> hadoop fs -mkdir /tmp/user/hive
+> hadoop fs -mkdir /tmp/user/hive/warehouse
+> hadoop fs -chmod g+w /tmp
+> hadoop fs -chmod g+w /tmp/user
+> hadoop fs -chmod g+w /tmp/user/hive
+> hadoop fs -chmod g+w /tmp/user/hive/warehouse
