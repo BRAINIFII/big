@@ -1,0 +1,58 @@
+> sudo adduser hbuser
+
+> sudo usermod -aG sudo hbuser
+
+> wget https://downloads.apache.org/hbase/2.4.15/hbase-2.4.15-bin.tar.gz
+
+> tar -xvzf hbase-2.4.15-bin.tar.gz
+
+> sudo mv hbase-2.4.15 hbase
+
+> readlink -f /usr/bin/javac
+
+# add the above output in the hbase env file
+
+> nano hbase/conf/hbase-env.sh
+
+Edit the .bashrc file
+> nano ~/.bashrc
+
+export HBASE_HOME=/home/hbuser/hbase
+export PATH=$PATH:$HBASE_HOME/bin
+
+Read the edited bashrc file to the running memory
+
+> source ~/.bashrc
+
+Add the following properties below the existing ones in the hbase/conf/hbase-site.xml file
+
+<property>
+    <name>hbase.rootdir</name>
+    <value>file:///home/hbuser/hbase</value>
+</property>
+<property>
+    <name>hbase.zookeeper.property.dataDir</name>
+    <value>/home/hbuser/hbase</value>
+</property>
+
+Run hbase by typing
+> start-hbase.sh
+> hbase shell
+
+# Storing and retrieval of data
+# Enter the following command in the hbase shell
+create 'emp', 'pri_data', 'pro_data'
+put 'emp', '1', 'pri_data:name', 'Andy'
+e =get_table 'emp'
+e.put '1', 'pri_data:age', '22'
+e.put '1', 'pro_data:post', 'asst. manager'
+e.put '1', 'pro_data:salary', '40k'
+e.put '2', 'pri_data:name', 'Icarus'
+e.put '2', 'pri_data:age', '22'
+e.put '2', 'pro_data:post', 'manager'
+e.get '1'
+e.get '2'
+
+e.scan
+
+exit

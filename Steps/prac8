@@ -1,0 +1,39 @@
+# Pig installation
+1. Download the zip file from the official Pig release site
+2. Extract the pig zip
+
+> wget https://downloads.apache.org/pig/pig-0.17.0/pig-0.17.0.tar.gz
+
+> sudo tar -xf pig-0.17.0.tar.gz
+
+3. Moving the file
+
+$ mv pig-0.17.0 /home/hadoop/pig
+
+4. Set the .bashrc file
+> nano ~/.bashrc
+
+export PIG_HOME=/home/hadoop/pig
+export PATH=$PATH:$PIG_HOME/bin
+export PIG_CLASSPATH=$HADOOP_HOME/conf
+
+5. Verify installation
+$ pig -version
+
+if you get a java missing error add java path
+> readlink -f /usr/bin/javac
+
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+
+pig -version
+
+6. Run pig locally
+$ pig -x local
+
+Add text file in the below path
+
+lines = LOAD '/home/hadoop/textfile.txt' AS (line:chararray);
+words = FOREACH lines GENERATE FLATTEN(TOKENIZE(line)) as word;
+grouped = GROUP words BY word;
+wordcount = FOREACH grouped GENERATE group, COUNT(words);
+DUMP wordcount;
