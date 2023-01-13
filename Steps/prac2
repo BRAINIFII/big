@@ -1,6 +1,6 @@
 
 
->
+> wget https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac2_files/WC_Mapper.java
 
 # Compile the java files
 javac -classpath hadoop-core-1.2.1.jar -d wordcountproblem WC_Mapper.java
