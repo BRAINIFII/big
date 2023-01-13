@@ -10,6 +10,7 @@
 > cd ..
 > sudo chmod 777 wordc
 # Compile the java files
+> cd wordc
 > javac -classpath hadoop-core-1.2.1.jar -d wordcountproblem WC_Mapper.java WC_Reducer.java WC_Runner.java
 
 # Create the JAR file
