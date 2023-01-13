@@ -1,0 +1,80 @@
+# Scala installation
+> sudo apt install scala
+# check scala installation
+> scala -version
+
+# Spark installation
+1. Extract the Spark (make sure to be in the directory the spark is downloaded)
+
+> wget https://dlcdn.apache.org/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz
+
+> sudo tar -xvf spark-3.3.1-bin-hadoop3.tgz
+2. Create an installation directory /opt/spark.
+> sudo mkdir /opt/spark
+
+3. Move the extracted files to the installation directory.
+> sudo mv spark-3.3.1-bin-hadoop3/* /opt/spark
+
+4. Change the permission of the directory.
+> sudo chmod -R 777 /opt/spark
+
+5. Edit the bashrc configuration file to add Apache Spark installation directory to the system path.
+
+> sudo nano ~/.bashrc
+
+6. Add the code below at the end of the file, save and exit the file:
+
+export SPARK_HOME=/opt/spark
+export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
+
+7. Save the changes to take effect.
+> source ~/.bashrc
+
+8. Start the standalone master server.
+> start-master.sh
+
+9. Find your server hostname from the dashboard by visiting http://localhost:8080. Under the URL
+value. It might look like this:
+spark://<ip-address>:7077
+
+10. Start the Apache Spark worker process. Change spark://ubuntu:7077 with your server
+hostname.
+> start-worker.sh spark://<ip-address>:7077
+
+12. Use jps to confirm the status
+
+13. Open spark shell
+> spark-shell
+
+# Entering graphical data in spark shell
+
+#creating graphical data in graphx
+import org.apache.spark.graphx._
+
+# creating own data type
+case class User(name: String, age: Int)
+
+
+val users = List((1L, User("Alex", 26)), (2L, User("Bill", 42)), (3L, User("Carol", 18)), (4L, User("Dave", 16)),
+(5L, User("Eve", 45)), (6L, User("Farell", 30)), (7L, User ("Garry", 32)), (8L, User("Harry", 36)), (9L,User("Ivan", 28)), (10L, User("Jill", 48)))
+
+val usersRDD = sc.parallelize (users)
+
+val follows = List(Edge(1L, 2L, 1), Edge(2L, 3L, 1), Edge(3L, 1L, 1), Edge(3L, 4L, 1), Edge(3L, 5L, 1), Edge(4L,
+5L, 1), Edge(6L, 5L, 1), Edge(7L, 6L, 1), Edge(6L, 8L, 1), Edge(7L, 8L, 1), Edge(7L, 9L, 1), Edge(9L, 8L, 1),
+Edge(8L, 10L, 1), Edge(10L, 9L, 1), Edge(1L, 1L, 1))
+
+val followsRDD = sc.parallelize(follows)
+
+# creating user to access data 19
+val defaultUser = User("Brainifii", 22)
+val socialgraph = Graph (usersRDD, followsRDD, defaultUser)
+
+#Access data of the graph
+socialgraph.numEdges
+
+socialgraph.numVertices
+
+socialgraph.inDegrees.collect
+
+socialgraph.outDegrees.collect
