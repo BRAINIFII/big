@@ -4,6 +4,7 @@
 > wget https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac2_files/WC_Mapper.java
 > wget https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac2_files/WC_Reducer.java
 > wget https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac2_files/WC_Runner.java
+> wget https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac2_files/hadoop-core-1.2.1.jar
 > wget https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac2_files/data.txt
 > cd ..
 > sudo chmod 777 wordc
