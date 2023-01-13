@@ -45,3 +45,27 @@ export PATH=$PATH:$HIVE_HOME/bin
 > hadoop fs -chmod g+w /tmp/user
 > hadoop fs -chmod g+w /tmp/user/hive
 > hadoop fs -chmod g+w /tmp/user/hive/warehouse
+> schematool -dbType derby -initSchema
+> hiveserver2
+
+On new terminal
+> beeline -n hadoop -u jdbc:hive2://localhost:10000
+
+
+# Create and store data
+1. Create a new database
+> create database test;
+
+# verify with
+> show databases;
+
+2. Create a new table
+> create table test.emp (id int, name string);
+
+3. Insert a few tuples/records in the created table
+> insert into test.emp VALUES(1, 'Andy');
+> insert into test.emp VALUES(2, 'Ramy');
+> insert into test.emp VALUES(3, 'Youka');
+
+4. Display the table data
+> select * from test.emp
