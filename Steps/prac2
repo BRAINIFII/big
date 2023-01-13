@@ -16,3 +16,20 @@
 
 # Create a text file in the same folder with some content
 > sudo nano data.txt
+
+# start the Hadoop server
+> start-dfs.sh
+> start-yarn.sh
+
+# Uploading file to Hadoop
+1. Go to http://localhost:9870/ > click on utilities > Browse the file system
+2. Click on create a new folder and enter name as ‘test’
+3. Enter the created folder
+
+> hdfs dfs -put data.txt /"test"
+
+# Run the MapReduce program with the JAR file
+> hadoop jar wordcountproblem.jar com.wordcountproblem.WC_Runner /test/data.txt /r_output
+
+# print the generated output to the console
+> hdfs dfs -cat /r_output/part-00000

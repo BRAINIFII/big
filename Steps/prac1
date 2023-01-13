@@ -29,7 +29,10 @@ Keep password as 'hadoop'
 
 5. Generate public and private key pairs.
 > sudo su hadoop
+> mkdir ~/.ssh
 > sudo ssh-keygen -t rsa
+
+add ~/.ssh in path
 
 1. Add the generated public key from id_rsa.pub to authorized_keys.
 > sudo cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
