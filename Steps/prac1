@@ -35,7 +35,7 @@ Keep password as 'hadoop'
 > sudo cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 
 1. Change the permissions of the authorized_keys file.
-> sudo chmod 640 /root/.ssh/authorized_keys
+> sudo chmod 640 ~/.ssh/authorized_keys
 1. Verify if the password-less SSH is functional.
 
 > ssh localhost
