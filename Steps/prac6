@@ -1,0 +1,31 @@
+# Hive installation
+1. Download hive-2.3.9 from the given link
+https://downloads.apache.org/hive/
+
+2. Extract, rename and move the downloaded zip file to the appropriate folder
+3. Edit the .bashrc file
+$ nano ~/.bashrc
+export HIVE_HOME=/home/hadoop/hive
+export PATH=$PATH:$HIVE_HOME/bin
+
+4. Edit the core-site.xml and add the following properties within the existing Hadoop configuration
+
+> nano $HADOOP_HOME/etc/Hadoop/core-site.xml
+<property>
+        <name>hadoop.proxyuser.hadoop.groups</name>
+        <value>*</value>
+    </property>
+    <property>
+        <name>hadoop.proxyuser.hadoop.hosts</name>
+        <value>*</value>
+    </property>
+    <property>
+        <name>hadoop.proxyuser.server.hosts</name>
+        <value>*</value>
+    </property>
+    <property>
+        <name>hadoop.proxyuser.server.groups</name>
+        <value>*</value>
+</property>
+5. Make the hdfs directory
+$ hadoop fs -mkdir /tmp

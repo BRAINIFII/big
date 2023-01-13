@@ -6,9 +6,6 @@
 
 wget https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac5_files/NetworkWordCount.scala
 wget https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac5_files/WordCount.scala
-wget https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac5_files/how%20to%20download%20sbt
-wget https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac5_files/networkwordcount.sbt
-wget https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac5_files/wordcount.sbt
 
 4. Create the sbt package
 $ sbt package
