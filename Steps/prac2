@@ -1,0 +1,13 @@
+
+
+>
+
+# Compile the java files
+javac -classpath hadoop-core-1.2.1.jar -d wordcountproblem WC_Mapper.java
+WC.Reducer.java WC_Runner.java
+
+# Create the JAR file
+> jar -cvf wordcountproblem.jar -C wordcountproblem /
+
+# Create a text file in the same folder with some content
+> sudo nano data.txt
