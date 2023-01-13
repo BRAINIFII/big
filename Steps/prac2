@@ -1,6 +1,7 @@
 
 > cd
 > mkdir wordc
+> cd wordc
 > wget https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac2_files/WC_Mapper.java
 > wget https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac2_files/WC_Reducer.java
 > wget https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac2_files/WC_Runner.java
