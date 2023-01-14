@@ -1,3 +1,10 @@
+Desc:
+Hadoop is an open-source software framework that allows for the distributed processing of large data sets across clusters of computers.
+It is designed to handle big data and is composed of the Hadoop Distributed File System (HDFS) and the MapReduce programming model.
+Hadoop is commonly used for big data analytics, data processing, and batch processing.
+Hadoop enables businesses to quickly gain insights from large and complex data sets.
+
+
 Implementation:
 
 # Installing Java

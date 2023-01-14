@@ -1,3 +1,8 @@
+Desc:
+Apache Spark is an open-source, distributed computing system for big data processing. It is designed to perform both batch processing and real-time analytics. Spark can handle large data sets and provides an interface for programming entire clusters with implicit data parallelism and fault-tolerance. It can be used in a variety of applications such as SQL, streaming, and machine learning, and can be integrated with Hadoop and other big data tools.
+
+Scala is a programming language that runs on the Java Virtual Machine (JVM). It is a modern, object-oriented and functional programming language. Scala combines the object-oriented and functional programming paradigms. It supports the seamless integration of object-oriented and functional language constructs. Scala is used for a wide range of applications, including data processing, machine learning, and web development, and is particularly well-suited for big data processing using Apache Spark.
+
 # Scala installation
 > sudo apt install scala
 # check scala installation

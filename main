@@ -1,23 +1,23 @@
 prac1(Installing Hadoop)
-Url: https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac1
+Url: curl -sL https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac1
 
 prac2(Map-Reduce)
-Url: https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac2
+Url: curl -sL https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac2
 
 prac3(Spark)
-Url: https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac3
+Url: curl -sL https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac3
 
 prac4(Handle Error)
-Url: https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac4
+Url: curl -sL https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac4
 
 prac5(Streaming)
-Url: https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac5
+Url: curl -sL https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac5
 
 prac6(Hive)
-Url: https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac6
+Url: curl -sL https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac6
 
 prac7(HBase)
-Url: https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac7
+Url: curl -sL https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac7
 
 prac8(Pig)
-Url: https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac8
+Url: curl -sL https://raw.githubusercontent.com/BRAINIFII/big/master/Steps/prac8

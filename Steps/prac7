@@ -1,3 +1,7 @@
+Desc:
+Apache HBase is a NoSQL, distributed, column-oriented database built on top of the Hadoop Distributed File System (HDFS). It is a non-relational, key-value store that is designed to handle high volume, high throughput, and low latency data. HBase tables are horizontally partitioned and can be distributed across multiple machines, making it a good option for handling big data. Hbase provides random, real-time, read/write access to data in Hadoop. It is used for real-time Big Data applications, such as real-time analytics, financial services, and personalization.
+
+
 > sudo adduser hbuser
 
 > sudo usermod -aG sudo hbuser

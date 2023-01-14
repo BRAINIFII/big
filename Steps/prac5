@@ -1,3 +1,7 @@
+Desc:
+Streaming is a technique for processing data in real-time, as it is generated or received. It allows for continuous and incremental processing of data, rather than processing data in batch. Streaming can be used for a variety of purposes, such as real-time analytics, live data processing, and real-time monitoring. Apache Kafka, Apache Storm and Apache Spark Streaming are popular tools for processing streaming data. Streaming data can come from various sources, such as IoT devices, social media feeds, and log files.
+
+
 # sbt package creation
 1. Create a new folder logged in as Hadoop user
 

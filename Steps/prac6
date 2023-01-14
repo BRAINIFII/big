@@ -1,3 +1,7 @@
+Desc:
+Apache Hive is a data warehousing and SQL-like query language for big data stored in the Hadoop Distributed File System (HDFS) or other storage systems. It allows for querying and managing large datasets using a SQL-like language called HiveQL. Hive allows to perform data summarization, querying, and analysis of large datasets stored in Hadoop. Hive also provides a way to perform data extract, transform and load (ETL) operations to prepare data for querying and analysis. Hive is built on top of Hadoop and provides a simple way for users to interact with big data stored in HDFS.
+
+
 # Hive installation
 1. Download hive-2.3.9
 > sudo su hadoop

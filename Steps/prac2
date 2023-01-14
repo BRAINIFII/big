@@ -1,3 +1,6 @@
+Desc:
+MapReduce is a programming model for processing large data sets that is often used in conjunction with the Hadoop Distributed File System (HDFS). It is a way to process data in parallel across a cluster of computers. The "Map" step involves processing each data item independently and the "Reduce" step combines the results of the individual processing. The goal is to break down a large problem into smaller, more manageable tasks that can be executed in parallel, thus speeding up the overall processing time.
+
 
 > cd
 > mkdir wordc

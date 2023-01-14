@@ -1,3 +1,7 @@
+Desc:
+Apache Pig is a high-level platform for creating programs that run on Apache Hadoop. It allows for the analysis of large data sets using a simple programming model that is similar to SQL. Pig provides a simple and high-level language called Pig Latin, which can be used to express data flows and transformations. Pig Latin scripts are then translated into a series of MapReduce jobs that are executed on a Hadoop cluster. Pig can be used for a variety of purposes, such as data extraction, transformation, and loading (ETL), ad-hoc analysis, and iterative processing of big data.
+
+
 # Pig installation
 1. Download the zip file from the official Pig release site
 2. Extract the pig zip
